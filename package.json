@@ -1,0 +1,11 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "This repository contains my solutions to LeetCode problems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
