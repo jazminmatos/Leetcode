@@ -1,9 +1,9 @@
 // https://leetcode.com/problems/two-sum/
 
 /* 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-You can return the answer in any order. 
+Given an array of integers nums and an integer target, return indices of the two numbers 
+such that they add up to target. You may assume that each input would have exactly one solution, 
+and you may not use the same element twice. You can return the answer in any order. 
 */
 
 function twoSum(nums, target) {
@@ -16,7 +16,7 @@ function twoSum(nums, target) {
     // If not, add current number and its index to map
     // If so, return the difference's index and the current number's index
     for (let i = 0; i < nums.length; i++) {
-        // Note: 0 is false in JavaScript. Need to check whether result is more than or equal than 0.
+        // Keys cannot be less than 0. Map is retrieving via keys. Hence, we need '>= 0'
         if (map.get(target - nums[i]) >= 0) {
             return [map.get(target - nums[i]), i]
         } else {
