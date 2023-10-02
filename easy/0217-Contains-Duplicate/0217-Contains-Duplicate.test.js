@@ -1,6 +1,6 @@
 const solutions = require('./0217-Contains-Duplicate')
 
-describe('tests for containsDuplicateSetSolution', () => {
+describe('tests for Set Solution', () => {
     test.each([
         {nums: [1,2,3,1], output: true},
         {nums: [1,2,3,4], output: false},
@@ -10,7 +10,7 @@ describe('tests for containsDuplicateSetSolution', () => {
     })
 })
 
-describe('tests for containsDuplicateLoopSolution', () => {
+describe('tests for Loop Solution', () => {
     test.each([
         {nums: [1,2,3,1], output: true},
         {nums: [1,2,3,4], output: false},
