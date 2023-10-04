@@ -7,7 +7,7 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
 typically using all the original letters exactly once.
 */
 
-var isAnagram = function(s, t) {
+function isAnagram(s, t) {
 if (s.length != t.length) {
     return false
 }
@@ -43,3 +43,5 @@ for (const letter of t) {
 // if size of map is more than 0, return false
 return map.size === 0
 };
+
+module.exports = isAnagram
