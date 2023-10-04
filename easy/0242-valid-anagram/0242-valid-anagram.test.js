@@ -4,7 +4,7 @@ describe('isAnagram function', () => {
     it.each([
         {s: "anagram", t: "nagaram", output: true},
         {s: "rat", t: "car", output: false},
-    ])('detects whether $s is an anagram of $t', ({s, t, output}) => {
+    ])("given $s and $t as arguments, returns $output", ({s, t, output}) => {
         expect(isAnagram(s, t)).toBe(output)
     })
 });
