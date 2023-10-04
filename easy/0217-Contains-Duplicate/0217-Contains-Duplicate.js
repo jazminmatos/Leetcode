@@ -6,6 +6,8 @@ and return false if every element is distinct.
 */
 
 // (1 of 2) Solution using Set
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 function containsDuplicateSetSolution(nums) {
     const numSet = new Set(nums)
 
@@ -14,13 +16,15 @@ function containsDuplicateSetSolution(nums) {
 }
 
 // (2 of 2) Solution using sorting & for loop
+// Time Complexity: O(n^2)
+// Space Complexity: O(1)
 function containsDuplicateLoopSolution(nums) {
     // Sort array
-    let sortedNums = nums.sort((a, b) => a - b)
+    nums.sort((a, b) => a - b)
 
     // Loop through sorted array & check if a number is the same as the next one
     for (let i = 0; i < nums.length; i++) {
-        if (sortedNums[i] === sortedNums[i + 1]) {
+        if (nums[i] === nums[i + 1]) {
             return true
         }
     }
