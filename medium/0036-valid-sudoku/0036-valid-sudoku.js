@@ -22,7 +22,7 @@ function isValidSudoku(board) {
             if (num === ".") continue
 
             if (seen.has(`${num} in row ${row}`) || 
-                seen.has(`${num} in column ${column}`) ||
+                seen.has(`${num} in column ${column}`) || 
                 seen.has(`${num} in subBox (${Math.floor(row/3)}/${Math.floor(column/3)})`)) {
 
                 return false
