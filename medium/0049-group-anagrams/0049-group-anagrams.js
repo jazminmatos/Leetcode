@@ -1,5 +1,16 @@
+// https://leetcode.com/problems/group-anagrams/
+
+/* 
+Given an array of strings strs, group the anagrams together. You can return the 
+answer in any order.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different 
+word or phrase, typically using all the original letters exactly once.
+*/
+
 var groupAnagrams = function(strs) {
-    // create a map where the key is the alphabetized string and the value is all of its anagrams
+    // create a map where the key is the alphabetized string and the value 
+    // is all of its anagrams
     let map = new Map ()
     let solution = []
     
@@ -22,3 +33,5 @@ var groupAnagrams = function(strs) {
 
     return solution
 };
+
+module.exports = groupAnagrams
