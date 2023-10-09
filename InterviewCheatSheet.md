@@ -66,4 +66,8 @@ From Andrei Neagoie's Master The Coding Interview: Data Structures + Algorithms
 - [ ] Hash tables and precomputed information (i.e. sorted) are some of the best ways to optimize your code
 - [ ] Look at the Time vs Space tradeoff. Sometimes storing extra state in memory can help the time. (Runtime)
 - [ ] If the interviewer is giving you advice/tips/hints. Follow them
-- [ ] Space time tradeoffs: Hastables usually solve this a lot of the times. You use more space, but you can get a time optimization to the process. In programming, you often times can use up a little bit more space to get faster time And always remember: Communicate your thought process as much as possible. Don’t worry about finishing it fast. Every part of the interview matters.
+- [ ] Space time tradeoffs: Hastables usually solve this a lot of the times. You use more space, but you can get a time optimization to the process. In programming, you often times can use up a little bit more space to get faster time
+
+---
+
+**And always remember**: Communicate your thought process as much as possible. Don’t worry about finishing it fast. Every part of the interview matters.
