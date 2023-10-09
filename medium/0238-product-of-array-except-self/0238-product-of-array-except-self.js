@@ -8,27 +8,28 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 You must write an algorithm that runs in O(n) time and without using the division operation.
 */
 
-var productExceptSelf = function (nums) {
-  let result = [];
-  let left = 1;
-  let right = 1;
+function productExceptSelf(nums) {
+    let result = [];
+    let left = 1;
+    let right = 1;
 
-  // Retrieve the product of all the elements to the left of nums[i]
-  for (let i = 0; i < nums.length; i++) {
-    result[i] = left;
-    left *= nums[i];
-  }
+    // Retrieve the product of all the elements to the left of nums[i]
+    for (let i = 0; i < nums.length; i++) {
+        result[i] = left;
+        left *= nums[i];
+    }
 
-  // Calculate the product of all the elements to the left and all the elements to the right of nums[i]
-  for (let i = nums.length - 1; i >= 0; i--) {
-    // compute right product for nums[i] and multiply it with the left product
-    result[i] *= right;
-    right *= nums[i];
-  }
+    // Calculate the product of all the elements to the left and all the elements to the right of nums[i]
+    for (let i = nums.length - 1; i >= 0; i--) {
+        // compute right product for nums[i] and multiply it with the left product
+        result[i] *= right;
+        right *= nums[i];
+    }
 
-  return result;
+    return result;
 };
 
+module.exports = productExceptSelf;
 /* 
 Aproach (Aproach of commented code)
 The first solution computes the product of all the elements to the left and right of each element in the input array 
