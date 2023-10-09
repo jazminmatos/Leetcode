@@ -12,5 +12,6 @@
 | O(2^n)      | Exponential | recursive algorithms that solves a problem of size N                                       |
 | O(n!)       | Factorial   | you are adding a loop for every element                                                    |
 
-[^1]: Iterating through half a collection is still O(n).
-[^bignote]: Two separate collections: O(a \* b).
+[^1]:
+    Iterating through half a collection is still O(n).
+    Two separate collections: O(a \* b).
