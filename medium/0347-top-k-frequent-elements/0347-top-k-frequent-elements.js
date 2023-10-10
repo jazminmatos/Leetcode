@@ -9,7 +9,7 @@ function topKFrequent(nums, k) {
     // Map will track the number of times that a number will show up
     // nums = [1,1,1,2,2,3], numFrequency = {1 => 3, 2 => 2, 3 => 1}
     let numFrequency = new Map()
-    
+
     // Loop through nums array to get the top 'k' most frequent elements
     for (let num of nums) {
         if (!numFrequency.has(num)) {
@@ -19,7 +19,7 @@ function topKFrequent(nums, k) {
         }
     }
 
-    let stack = []
+    let result = []
     // Compare numFrequency values to get the 'k' most frequent elements
     // Loop through numFrequency, and save 'k' most frequent elements
     while (stack.length < k) {
@@ -35,7 +35,7 @@ function topKFrequent(nums, k) {
         stack.push(currKey)
         numFrequency.delete(currKey)
     }
-    return stack
+    return result
 };
 
 module.exports = topKFrequent
