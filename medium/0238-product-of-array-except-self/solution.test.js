@@ -1,4 +1,4 @@
-const productExceptSelf = require("./0238-product-of-array-except-self");
+const productExceptSelf = require("./solution");
 
 describe("productExceptSelf", () => {
     test.each([

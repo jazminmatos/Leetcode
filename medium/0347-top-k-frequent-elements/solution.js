@@ -22,7 +22,7 @@ function topKFrequent(nums, k) {
     let result = []
     // Compare numFrequency values to get the 'k' most frequent elements
     // Loop through numFrequency, and save 'k' most frequent elements
-    while (stack.length < k) {
+    while (result.length < k) {
         let currVal = 0
         let currKey = 0
 
@@ -32,7 +32,7 @@ function topKFrequent(nums, k) {
                 currKey = key
             }
         }
-        stack.push(currKey)
+        result.push(currKey)
         numFrequency.delete(currKey)
     }
     return result

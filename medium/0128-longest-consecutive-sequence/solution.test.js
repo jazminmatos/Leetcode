@@ -1,4 +1,4 @@
-const solution = require("./0128-longest-consecutive-sequence")
+const solution = require("./solution")
 
 describe('longestConsecutive', () => {
     test.each([

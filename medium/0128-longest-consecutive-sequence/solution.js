@@ -5,6 +5,7 @@ Given an unsorted array of integers nums, return the length of the longest conse
 
 You must write an algorithm that runs in O(n) time.
 */
+// [100, 1, 200, 2, 4, 3]
 
 var longestConsecutive = function (nums) {
     if (nums.length === 0) return 0;
