@@ -8,40 +8,43 @@ typically using all the original letters exactly once.
 */
 
 function isAnagram(s, t) {
-if (s.length != t.length) {
-    return false
-}
-
-// Create a map
-let map = new Map()
-
-// Iterate through s
-// set the letters as keys
-// set the number of times that the letters show up as their values
-for (const letter of s) {
-    // check if letter exists in map
-    // if it does not exist, add to map
-    // if it exists, add to its value
-    if (!map.has(letter)) {
-        map.set(letter, 1)
-    } else {
-        map.set(letter, map.get(letter) + 1)
+    if (s.length != t.length) {
+        return false
     }
-}
-// Iterate through t
-// Compare t's letters to map's letters
-for (const letter of t) {
-    // If letter exists in map, subtract from map's letter's value
+
+    // Create a map
+    let map = new Map()
+
+    // Iterate through s
+    // set the letters as keys
+    // set the number of times that the letters show up as their values
+    for (const letter of s) {
+        // check if letter exists in map
+        // if it does not exist, add to map
+        // if it exists, add to its value
+        if (!map.has(letter)) {
+            map.set(letter, 1)
+        } else {
+            map.set(letter, map.get(letter) + 1)
+        }
+
+        // Can rewrite the if statement, but not as readable as above:
+        // map.set(letter, (map.get(letter) || 0) + 1)
+    }
+    // Iterate through t
+    // Compare t's letters to map's letters
+    for (const letter of t) {
+        // If letter exists in map, subtract from map's letter's value
         // if that value is at 1, delete from map
-    if (map.has(letter) && map.get(letter) === 1) {
+        if (map.has(letter) && map.get(letter) === 1) {
             map.delete(letter)
-    } else {
-        map.set(letter, map.get(letter) - 1)
+        } else {
+            map.set(letter, map.get(letter) - 1)
+        }
     }
-}
-// if size of map is 0, return true
-// if size of map is more than 0, return false
-return map.size === 0
+    // if size of map is 0, return true
+    // if size of map is more than 0, return false
+    return map.size === 0
 };
 
 module.exports = isAnagram
