@@ -20,3 +20,5 @@ var transpose = function (matrix) {
     }
     return newMatrix
 };
+
+module.exports = transpose
