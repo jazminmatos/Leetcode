@@ -20,6 +20,8 @@ var isToeplitzMatrix = function (matrix) {
     return true
 };
 
+module.exports = isToeplitzMatrix
+
 // Example: 4 x 4 matrix
 // m = [[1,2,3,4],
 //      [5,1,2,3],
