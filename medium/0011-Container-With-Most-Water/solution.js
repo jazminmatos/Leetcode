@@ -25,7 +25,7 @@ var maxArea = function (height) {
 
     while (start < end) {
         h = Math.min(height[start], height[end])
-        w = Math.abs(start - end)
+        w = end - start
 
         if ((h * w) > area) {
             area = h * w
