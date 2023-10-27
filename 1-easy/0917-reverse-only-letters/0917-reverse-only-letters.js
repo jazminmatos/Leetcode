@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {string}
  */
-var reverseOnlyLetters = function(s) {
+var reverseOnlyLetters = function (s) {
     let start = 0
     let end = s.length - 1
     let temp
@@ -10,14 +10,19 @@ var reverseOnlyLetters = function(s) {
     let stringArray = s.split("")
 
     while (start < end) {
-        if (isLetter(start, stringArray[start]) && isLetter(end, stringArray[end])) {
-            temp = stringArray[start]
-            stringArray[start++] = stringArray[end]
-            stringArray[end--] = temp
+        if (!isLetter(start, stringArray[start])) {
+            start++
+            continue
         }
 
-        if (!isLetter(start, stringArray[start])) start++
-        if (!isLetter(end, stringArray[end])) end--
+        if (!isLetter(end, stringArray[end])) {
+            end--
+            continue
+        }
+
+        temp = stringArray[start]
+        stringArray[start++] = stringArray[end]
+        stringArray[end--] = temp
     }
     return stringArray.join("")
 };
