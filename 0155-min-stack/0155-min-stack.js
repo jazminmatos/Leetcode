@@ -28,6 +28,7 @@ MinStack.prototype.top = function() {
     return this.elements[this.elements.length - 1].value
 };
 
+// Need to check last element's minimumValue because getMin() does not update the minimumValue for previous elements in the stack
 /**
  * @return {number}
  */
