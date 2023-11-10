@@ -32,4 +32,13 @@ var merge = function (nums1, m, nums2, n) {
     return nums1
 };
 
+var merge2 = function (nums1, m, nums2, n) {
+    let sum = m + n
+    for (let i = m; i < sum; i++) {
+        nums1[i] = nums2[n - 1]
+        n--
+    }
+    return nums1.sort((a, b) => a - b)
+}
+
 module.exports = merge
