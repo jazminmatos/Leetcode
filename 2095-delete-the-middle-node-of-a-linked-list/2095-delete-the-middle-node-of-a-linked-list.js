@@ -27,9 +27,6 @@ var deleteMiddle = function(head) {
         return head
     }
 
-    if (previous) {
-        previous.next = slow.next
-    }
-    
+    previous.next = slow.next
     return head
 };
